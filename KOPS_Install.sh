@@ -63,7 +63,7 @@ fi
 [[ $PROC =~ arm ]] && PROC="arm"  # kops downloads use "arm" not full arm type
 
 # CREATE FILENAME AND DOWNLOAD LINK BASED ON GATHERED PARAMETERS
-FILENAME="kops_${VERSION}_${OS}_${PROC}.zip"
+FILENAME="kops_${OS}_${PROC}.zip"
 LINK="https://github.com/kubernetes/kops/releases/download/${VERSION}/${FILENAME}"
 LINKVALID=$(wget --spider -S "$LINK" 2>&1 | grep "HTTP/" | awk '{print $2}')
 
