@@ -75,7 +75,7 @@ if [[ "$LINKVALID" != 200 ]] || [[ "$LINKVALID" != 302 ]]; then
   echo -e "\tOS:\t$OS"
   echo -e "\tPROC:\t$PROC"
   echo -e "\tURL:\t$LINK"
-  exit 1
+  #exit 1
 fi
 
 # DETERMINE DESTINATION
