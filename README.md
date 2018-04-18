@@ -21,15 +21,16 @@ Options:
 Download the installer and make executable
 
 ``` shell
-wget https://raw.github.com/GSA-Briar-Patch/KOPS_Installer/master/terraform-install.sh
-# or curl -LO https://raw.github.com/GSA-Briar-Patch/KOPS_Installer/master/terraform-install.sh
-chmod +x terraform-install.sh
+wget https://raw.github.com/GSA-Briar-Patch/KOPS_Installer/master/KOPS_Install.sh && chmod +x KOPS_Install.sh
+# or 
+curl -LO https://raw.github.com/GSA-Briar-Patch/KOPS_Installer/master/KOPS_Install.sh && chmod +x KOPS_Install.sh
+
 ```
 
 Run the installer
 
 ``` shell
-./terraform-install.sh
+./KOPS_Install.sh
 ```
 
 Optional Parameters
