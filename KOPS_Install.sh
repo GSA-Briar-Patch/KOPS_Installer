@@ -31,8 +31,8 @@ usage() {
 }
 
 if ! unzip -h 2&> /dev/null; then
-  echo "aborting - unzip not installed and required for installation"
-  exit 1
+  echo "Installing unzip"
+  sudo apt-get install unzip
 fi
 
 while getopts ":i:ahv" arg; do
