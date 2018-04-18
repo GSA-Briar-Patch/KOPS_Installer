@@ -64,7 +64,7 @@ fi
 
 # CREATE FILENAME AND DOWNLOAD LINK BASED ON GATHERED PARAMETERS
 FILENAME="kops_${OS}_${PROC}"
-LINK="https://github.com/kubernetes/kops/releases/download/${VERSION}/${FILENAME}"
+LINK="https://github.com/kubernetes/kops/archive/${VERSION}.zip"
 LINKVALID=$(wget --spider -S "$LINK" 2>&1 | grep "HTTP/" | awk '{print $2}')
 
 # VERIFY LINK VALIDITY
