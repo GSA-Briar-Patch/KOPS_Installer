@@ -68,7 +68,7 @@ LINK="https://github.com/kubernetes/kops/archive/${VERSION}.zip"
 LINKVALID=$(wget --spider -S "$LINK" 2>&1 | grep "HTTP/" | awk '{print $2}')
 
 # VERIFY LINK VALIDITY
-if [[ "$LINKVALID" != 200 ]]; then
+if [[ "$LINKVALID" != 200 ]] || [[ "$LINKVALID" != 302 ]]; then
   echo -e "Cannot Install - Download URL Invalid"
   echo -e "\nParameters:"
   echo -e "\tVER:\t$VERSION"
