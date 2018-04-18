@@ -119,12 +119,12 @@ unzip -qq "$FILENAME" || exit 1
 # COPY TO DESTINATION
 mkdir -p "${BINDIR}" || exit 1
 echo $BINDIR
-${CMDPREFIX} cp -f kops "$BINDIR" || exit 1
+${CMDPREFIX} cp -f kops-${VERSION} "$BINDIR" || exit 1
 
 # CLEANUP AND EXIT
 cd "${TMPDIR}" || exit 1
 rm -rf "${UTILTMPDIR}"
 [[ ! "$STREAMLINED" ]] && echo
-echo "Terraform Version ${VERSION} installed to ${BINDIR}"
+echo "KOPS Version ${VERSION} installed to ${BINDIR}"
 
 exit 0
