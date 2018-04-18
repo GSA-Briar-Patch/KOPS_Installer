@@ -118,8 +118,8 @@ unzip -qq "$FILENAME" || exit 1
 
 # COPY TO DESTINATION
 mkdir -p "${BINDIR}" || exit 1
-echo $BINDIR
-${CMDPREFIX} cp -f kops-${VERSION} "$BINDIR" || exit 1
+echo kops-${VERSION}/ "$BINDIR"
+cp -f kops-${VERSION}/ "$BINDIR" || exit 1
 
 # CLEANUP AND EXIT
 cd "${TMPDIR}" || exit 1
