@@ -108,7 +108,6 @@ fi
 TMPDIR=${TMPDIR:-/tmp}
 UTILTMPDIR="kops_${VERSION}"
 
-echo $UTILTMPDIR
 cd "$TMPDIR" || exit 1
 mkdir -p "$UTILTMPDIR"
 cd "$UTILTMPDIR" || exit 1
@@ -119,6 +118,7 @@ unzip -qq "$FILENAME" || exit 1
 
 # COPY TO DESTINATION
 mkdir -p "${BINDIR}" || exit 1
+echo $BINDIR
 ${CMDPREFIX} cp -f kops "$BINDIR" || exit 1
 
 # CLEANUP AND EXIT
