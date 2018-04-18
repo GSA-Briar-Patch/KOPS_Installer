@@ -108,6 +108,7 @@ fi
 TMPDIR=${TMPDIR:-/tmp}
 UTILTMPDIR="kops_${VERSION}"
 
+echo $UTILTMPDIR
 cd "$TMPDIR" || exit 1
 mkdir -p "$UTILTMPDIR"
 cd "$UTILTMPDIR" || exit 1
