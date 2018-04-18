@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# TERRAFORM INSTALLER - Automated Terraform Installation
+# KOPS INSTALLER - Automated KOPS Installation
 #  Based on the work from Robert Peteuil  @RobertPeteuil
 #   
 #     Automatically Download, Extract and Install
@@ -60,11 +60,11 @@ if [[ "$OS" == "linux" ]]; then
 else
   PROC="amd64"
 fi
-[[ $PROC =~ arm ]] && PROC="arm"  # terraform downloads use "arm" not full arm type
+[[ $PROC =~ arm ]] && PROC="arm"  # kops downloads use "arm" not full arm type
 
 # CREATE FILENAME AND DOWNLOAD LINK BASED ON GATHERED PARAMETERS
-FILENAME="terraform_${VERSION}_${OS}_${PROC}.zip"
-LINK="https://releases.hashicorp.com/terraform/${VERSION}/${FILENAME}"
+FILENAME="kops_${VERSION}_${OS}_${PROC}.zip"
+LINK="https://github.com/kubernetes/kops/releases/download/${VERSION}/${FILENAME}"
 LINKVALID=$(wget --spider -S "$LINK" 2>&1 | grep "HTTP/" | awk '{print $2}')
 
 # VERIFY LINK VALIDITY
